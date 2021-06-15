@@ -45,7 +45,10 @@ header = '''
 def run_conversion_to_html(mdfile, output):
     with open(mdfile, "r", encoding='utf-8') as input_file:
         text = input_file.read()
-        html = md.markdown(text)
+        html = md.markdown(
+            input_file.read(),
+            extensions = ['fenced_code', 'tasklist', 'markdown_katex', 'tables']
+        )
     with open(output, 'w', encoding='utf-8') as output_file:
         output_file.write(
             ''.join('<html>' + header + html + '\n</html>')

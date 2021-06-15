@@ -1,0 +1,5 @@
+click==8.0.1
+Markdown==3.3.4
+markdown-katex==202106.1032
+pathlib2==2.3.5
+six==1.16.0
