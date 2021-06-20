@@ -8,7 +8,7 @@ header = '''
 
     <script>hljs.highlightAll();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="github-markdown.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neelabalan/github-markdown-css@main/github-markdown.css">
 
     <style>
         .markdown-body {
@@ -44,7 +44,6 @@ header = '''
 
 def run_conversion_to_html(mdfile, output):
     with open(mdfile, "r", encoding='utf-8') as input_file:
-        text = input_file.read()
         html = md.markdown(
             input_file.read(),
             extensions = ['fenced_code', 'tasklist', 'markdown_katex', 'tables']
