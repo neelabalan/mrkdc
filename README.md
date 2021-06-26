@@ -33,6 +33,10 @@ to the top of converted HTML for styling and this includes syntax highlighting.
 </head>
 <article class="markdown-body">
 ```
+## what does it look like?
+> for some reason the syntax highlighting doesn't seem to work in `htmlpreview.github.io`
+
+[Converted HTML](http://htmlpreview.github.io/?https://raw.githubusercontent.com/neelabalan/mrkdc/master/sample/output.html) from [sample](https://github.com/neelabalan/mrkdc/tree/master/sample) directory
 
 ## how to run?
 
@@ -45,7 +49,7 @@ python3 mrkdc file.md -o output.html
 
 - [markdown](https://github.com/Python-Markdown/markdown) for markdown to HTML conversion
 - [markdown-katex](https://github.com/mbarkhau/markdown-katex) for math support
-- [tasklist](https://github.com/facelessuser/pymdown-extensions) for `- [ ] ` kinda task list
+- [tasklist](https://github.com/facelessuser/pymdown-extensions) for `- [ ]` kinda task list
 - [click](https://github.com/pallets/click/) for arg parsing
 - [github markdown css](https://github.com/sindresorhus/github-markdown-css) (`monospace` font)
 - [highlightjs](https://github.com/highlightjs/highlight.js/) for syntax highlighting
