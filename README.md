@@ -41,11 +41,11 @@ to the top of converted HTML for styling and this includes syntax highlighting.
 ## how to run?
 
 ```
-python3 mrkdc file.md -o output.html
+python3 mrkdc.py file.md -o output.html
 
 or 
 
-python3 mrkdc file.md --browser
+python3 mrkdc.py file.md --browser
 ```
 
 
