@@ -38,6 +38,10 @@ to the top of converted HTML for styling and this includes syntax highlighting.
 
 ```
 python3 mrkdc file.md -o output.html
+
+or 
+
+python3 mrkdc file.md --browser
 ```
 
 
@@ -49,6 +53,8 @@ python3 mrkdc file.md -o output.html
 - [click](https://github.com/pallets/click/) for arg parsing
 - [github markdown css](https://github.com/sindresorhus/github-markdown-css) (`monospace` font)
 - [highlightjs](https://github.com/highlightjs/highlight.js/) for syntax highlighting
+- [bottle](https://github.com/bottlepy/bottle) for rendering html on browser
+> will require to referesh the browser after every save
 
 
 
