@@ -1,3 +1,4 @@
+bottle==0.12.19
 click==8.0.1
 Markdown==3.3.4
 markdown-katex==202106.1032

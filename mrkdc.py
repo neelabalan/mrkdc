@@ -1,5 +1,7 @@
 import click
 import markdown as md
+from bottle import static_file, route, run
+
 
 header = '''
 <head>
@@ -42,11 +44,29 @@ def run_conversion_to_html(mdfile, output):
         )
 
 
+def serve_static(mdfile):
+    @route('/')
+    def html():
+        run_conversion_to_html(mdfile, 'temp.html')
+        return static_file('temp.html', root='.')
+
+
 @click.command()
 @click.argument('mdfile', type=click.Path(exists=True))
-@click.option('-o', '--output', required=False, type=str)
-def main(mdfile, output):
-    run_conversion_to_html(mdfile, output)
+@click.option('-o', '--output', type=str)
+@click.option('-b', '--browser', is_flag=True, type=bool)
+def main(mdfile, output, browser):
+    if browser:
+        try:
+            serve_static(mdfile)
+            run(reloader=True, debug=False)
+        except KeyboardInterrupt:
+            pass #cleanup temp
+    else:
+        if not output:
+            raise Exception('Output filename needs to be provided')
+        run_conversion_to_html(mdfile, output)
+
 
 if __name__ == '__main__':
     main()
